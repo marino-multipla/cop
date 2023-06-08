@@ -1,0 +1,25 @@
+######################################################################################################
+Nvidia NVML Driver/library version mismatch
+https://stackoverflow.com/questions/43022843/nvidia-nvml-driver-library-version-mismatch
+
+-------------------------------------------------------------------------------------------
+CASE1
+lsmod | grep nvidia
+
+sudo rmmod nvidia_drm
+sudo rmmod nvidia_modeset
+sudo rmmod nvidia_uvm
+
+sudo rmmod nvidia
+
+lsmod | grep nvidia
+
+nvidia-smi
+
+-------------------------------------------------------------------------------------------
+CASE2
+sudo apt-get remove --purge nvidia-381
+sudo apt install nvidia-driver-430
+nvidia-smi
+
+######################################################################################################
