@@ -1,4 +1,11 @@
-#####################################################################################################################à
+####################################################################################################################
+Reset conda channel
+
+conda config --remove channels conda-forge
+conda config --add channels conda-forge
+conda update conda
+
+#####################################################################################################################
 How to unload kernel module 'nvidia-drm'?
 CUDA Installation https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu
 
