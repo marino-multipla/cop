@@ -1,6 +1,10 @@
 ####################################################################################################################
 Reset conda channel
 
+using bash xxxx, Miniconda3 will now be installed into this location:
+/home/gmaccagni/miniconda3
+
+
 conda config --remove channels conda-forge
 conda config --add channels conda-forge
 conda update conda
