@@ -25,6 +25,9 @@ nvidia-smi
 ######################################################################################################
 Habitat-Lab Setup
 
+#Install habitat-sim on habitat env and then clone the environment as habitat_v1
+conda create --name habitat_v1 --clone habitat
+
 RUN:              pip install -e habitat-baselines
 IF YOU GET:       error: command 'gcc' failed: No such file or directory
 THEN:             sudo apt install gcc
