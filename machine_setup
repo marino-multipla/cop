@@ -1,3 +1,43 @@
+#####################################################################################################################à
+How to unload kernel module 'nvidia-drm'?
+CUDA Installation https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu
+
+1) Download the latest CUDA Toolkit
+
+2) Switch to tty3 by pressing Ctl+Alt+F3
+
+3) Unload nvidia-drm before proceeding.
+
+3a) Isolate multi-user.target
+
+sudo systemctl isolate multi-user.target
+
+3b) Note that nvidia-drm is currently in use.
+
+lsmod | grep nvidia.drm
+
+3c) Unload nvidia-drm
+
+sudo modprobe -r nvidia-drm
+
+4d) Note that nvidia-drm is not in use anymore.
+
+lsmod | grep nvidia.drm
+
+5) Go to your download folder and run the cuda installation.
+
+sudo sh cuda_10.1.168_418.67_linux.run
+
+6) Answer any prompts during installation.
+
+7) When installation has finished, confirm that the CUDA Version has been updated.
+
+nvidia-smi
+
+8) Start the GUI again.
+
+sudo systemctl start graphical.target
+
 ######################################################################################################
 Nvidia NVML Driver/library version mismatch
 https://stackoverflow.com/questions/43022843/nvidia-nvml-driver-library-version-mismatch
