@@ -1,0 +1,44 @@
+uname -a
+Linux gmaccagni-Lenovo-ideapad-530S-15IKB 5.19.0-45-generic #46~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jun 7 15:06:04 UTC 20 x86_64 x86_64 x86_64 GNU/Linux
+
+nvidia-smi
+NVIDIA-SMI 535.54.03              Driver Version: 535.54.03    CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce MX150           Off | 00000000:01:00.0 Off |                  N/A |
+| N/A   40C    P8              N/A / ERR! |      4MiB /  2048MiB |      0%      Default |
+|                                         |                      |                  N/A 
+
+python examples/interactive_play.py --never-end
+[18:41:40:810858]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 00:PBR.
+[18:41:40:811272]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 002_master_chef_can  | newObjectHandle : 002_master_chef_can_:0000
+[18:41:40:811637]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 013_apple  | newObjectHandle : 013_apple_:0003
+[18:41:40:811910]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 026_sponge  | newObjectHandle : 026_sponge_:0001
+[18:41:40:812147]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 026_sponge  | newObjectHandle : 026_sponge_:0002
+[18:41:40:812381]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 013_apple  | newObjectHandle : 013_apple_:0004
+[18:41:40:812624]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 026_sponge  | newObjectHandle : 026_sponge_:0003
+[18:41:40:812861]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 014_lemon  | newObjectHandle : 014_lemon_:0002
+[18:41:40:812992]:[Assets] ResourceManager.cpp(866)::loadRenderAsset : Loading general asset named: data/objects/ycb/configs/../meshes/003_cracker_box/google_16k/textured.glb
+[18:41:40:813005]:[Assets] ResourceManager.cpp(1666)::configureImporterManagerGLExtensions : Importing Basis files as BC7.
+[18:41:40:921711]:[Assets] ResourceManager.cpp(2232)::getMaterialShaderType : Shadertype being used for file : textured.glb | shadertype name : material
+[18:41:40:921760]:[Assets] ResourceManager.cpp(2105)::loadMaterials : Building 1 materials for asset named 'textured.glb' : 
+[18:41:40:921802]:[Assets] ResourceManager.cpp(2210)::loadMaterials : Idx 00:PBR.
+[18:41:40:922226]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 003_cracker_box  | newObjectHandle : 003_cracker_box_:0000
+[18:41:40:922677]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 002_master_chef_can  | newObjectHandle : 002_master_chef_can_:0001
+[18:41:40:922947]:[Physics] PhysicsManager.cpp(285)::addObject : Simplified template handle : 015_peach  | newObjectHandle : 015_peach_:0001
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,467]:
+Bad inertia tensor properties, setting inertia to zero for link: r_gripper_finger_link
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,467]:
+Bad inertia tensor properties, setting inertia to zero for link: l_gripper_finger_link
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,467]:
+Bad inertia tensor properties, setting inertia to zero for link: r_gripper_finger_link
+b3Warning[examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp,467]:
+Bad inertia tensor properties, setting inertia to zero for link: l_gripper_finger_link
+X Error of failed request:  BadAccess (attempt to access private resource denied)
+  Major opcode of failed request:  152 (GLX)
+  Minor opcode of failed request:  5 (X_GLXMakeCurrent)
+  Serial number of failed request:  89
+  Current serial number in output stream:  89
