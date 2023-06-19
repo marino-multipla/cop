@@ -5,3 +5,4 @@ find . -name '*.py' -type f -exec cat \{} \; | tqdm --unit loc --unit_scale | wc
 
 tar -zcf - ~/dloads > backup.tgz
 tar -zcf - ~/dloads | tqdm --bytes --total 'du -sb ~/dloads | cut -f1' > backup.tgz
+#taqaddum  or te quiero demasiado
