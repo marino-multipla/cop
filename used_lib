@@ -1,0 +1,5 @@
+find . -name '*.py' -type f -exec cat \{} \; | wc -l
+
+find . -name '*.py' -type f -exec cat \{} \; | tqdm --unit loc --unit_scale | wc -l
+
+#loc - line of code
