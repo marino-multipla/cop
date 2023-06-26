@@ -1,8 +1,19 @@
 find . -name '*.py' -type f -exec cat \{} \; | wc -l
 find . -name '*.py' -type f -exec cat \{} \; | tqdm --unit loc --unit_scale | wc -l
 
-#loc - line of code
+# loc - line of code
 
 tar -zcf - ~/dloads > backup.tgz
 tar -zcf - ~/dloads | tqdm --bytes --total 'du -sb ~/dloads | cut -f1' > backup.tgz
-#taqaddum  or te quiero demasiado
+# taqaddum  or te quiero demasiado
+
+# variable size
+sys.getsizeof(map_to_file) / 1000000}MBytes
+
+# serialization/deserialization
+ml_map = pickle.loads(local_body)
+map_to_file = pickle.dumps(ml_map)
+
+# used memory
+process = psutil.Process(os.getpid())
+Used memory:{process.memory_info().rss / 1000000}MBytes"
