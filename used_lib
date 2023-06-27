@@ -17,3 +17,5 @@ map_to_file = pickle.dumps(ml_map)
 # used memory
 process = psutil.Process(os.getpid())
 Used memory:{process.memory_info().rss / 1000000}MBytes"
+
+https://www.geeksforgeeks.org/python-functools-lru_cache/
