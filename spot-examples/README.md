@@ -6,7 +6,7 @@ is subject to the terms and conditions of the Boston Dynamics Software
 Development Kit License (20191101-BDSDK-SL).
 -->
 
-# Arm Simple
+# Arm lock hand in body / lock hand in world
 
 This example program is the introductory programming example for Spot arm commands. It demonstrates how
 to initialize the SDK to talk to robot, how to command Spot to stand up, assume an arm pose and enable the 
