@@ -20,4 +20,3 @@ By introducing non-linear activation functions, such as Rectified Linear Unit (R
     Capacity for Learning Diverse Phenomena: Many real-world phenomena are inherently non-linear. For instance, the relationship between inputs and outputs in image recognition, natural language processing, and various other domains is often complex and non-linear. Non-linear activation functions empower the model to capture and understand these intricate relationships.
 
 In summary, non-linear activation functions are essential in neural networks because they break the linearity of the model, enabling it to learn and represent complex relationships in the data. This non-linearity is crucial for the neural network's ability to understand, generalize, and adapt to a wide range of phenomena in different domains.
-ChatGPT can make mistakes. Cons
