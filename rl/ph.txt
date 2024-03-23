@@ -1,1 +1,2 @@
-
+easy config with generator tools. made for MikroTik RouterOS
+https://buananetpbun.github.io/
