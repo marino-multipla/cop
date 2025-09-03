@@ -42,7 +42,15 @@ A solution can be to Remove or Disable brltty
 sudo apt remove brltty
 ```
 
+## Issue: PermissionError: [Errno 13] Permission denied: '/dev/ttyUSB0'
 
+Add Your User to the dialout Group
 
-
-
+```
+ls -l /dev/ttyUSB0
+sudo usermod -aG dialout $USER
+```
+After logout and log in
+```
+groups
+```
