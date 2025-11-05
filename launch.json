@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: WHAM/demo.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/WHAM/demo.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/WHAM/", // Set working directory to the root of your project
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src" // If you need to add extra paths (optional)
+            },
+            "envFile": "${workspaceFolder}/.env", // Optional: if you have environment variables stored in a .env file
+            "args": [], // You can pass any arguments you need here,
+            "pythonPath": "/home/gmaccagni/miniconda3/envs/wham/bin/python"  // Set Conda env's Python interpreter
+        }
+    ]
+}
