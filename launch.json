@@ -31,7 +31,7 @@
             "envFile": "${workspaceFolder}/.env", // Optional: if you have environment variables stored in a .env file
             "args": [
                 "--raw-dir",
-                "/home/gmaccagni/Workspace/collected_datasets/G1_InspireDFTP_Reply/single-sprite-161125-1342/",
+                "/home/gmaccagni/Workspace/collected_datasets/G1_InspireDFTP_Reply/",
                 "--robot_type",
                 "Unitree_G1_Inspire",
                 "--repo-id",
