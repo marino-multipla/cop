@@ -19,4 +19,23 @@ sudo systemctl start wg-quick@wg0
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo iptables -t nat -A POSTROUTING -s 10.100.0.0/24 -o eth0 -j MASQUERADE
 
-Z82B7+wIufgoc1g3XyoD8g6Uad6cpPz0nn8PG6irWSI=
+## 1601
+
+sudo wg-quick down wg0
+sudo wg-quick up wg0
+
+4️⃣ Ubuntu gateway – Enable forwarding
+sudo sysctl -w net.ipv4.ip_forward=1
+echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+
+5️⃣ Ubuntu gateway – NAT (MOST IMPORTANT)
+ip addr
+sudo iptables -t nat -A POSTROUTING -s 10.100.0.0/24 -o eth0 -j MASQUERADE
+
+✅ Final sanity check
+On Ubuntu:
+ip route
+iptables -t nat -L -v -n
+
+
