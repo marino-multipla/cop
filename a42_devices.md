@@ -2,15 +2,14 @@
 
 ## Most Used
 - Anna: https://192.168.200.11:8012?ws=wss://192.168.200.11:8012
+- Giacomo VECTOR16HXA14V: https://192.168.200.63:8012?ws=wss://192.168.200.63:8012
+- Fra: https://192.168.200.24:8012?ws=wss://192.168.200.24:8012
 
 
 ## Others
 - Anna 1: https://192.168.1.246:8012?ws=wss://192.168.1.246:8012
-- Fra: https://192.168.200.24:8012?ws=wss://192.168.200.24:8012
 - H1PC2: https://192.168.1.192:8012?ws=wss://192.168.1.192:8012
 - Giacomo VECTOR16HXA14V: https://192.168.1.172:8012?ws=wss://192.168.1.172:8012
-- Giacomo VECTOR16HXA14V: https://192.168.200.63:8012?ws=wss://192.168.200.63:8012
-
 - RH56DFTP: Default IP address: 192.168.11.210, port number: 6000
 - G1MCU: 192.168.123.161
 - G1PC2: IP Address 192.168.123.164
