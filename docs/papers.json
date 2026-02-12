@@ -1,14 +1,20 @@
 [
   {
-    "date": "2026-02-10",
-    "title": "Example Paper Title",
-    "topic": "Reinforcement Learning",
-    "link": "https://arxiv.org/abs/xxxx.xxxxx"
+    "date": "2026-02-12",
+    "title": "A novel protocol for the efficient generation of all three major hippocampal neuronal sub-populations from human pluripotent stem cells",
+    "topic": "Bioinformatics",
+    "link": "https://www.biorxiv.org/content/10.64898/2026.01.21.700748v1"
   },
   {
-    "date": "2026-02-05",
-    "title": "Robot Manipulation Study",
-    "topic": "Robotics",
-    "link": "https://arxiv.org/abs/yyyy.yyyyy"
+    "date": "2026-02-12",
+    "title": "Fully Spiking Variational Autoencoder",
+    "topic": "Bioinformatics",
+    "link": "https://arxiv.org/abs/2110.00375"
+  },
+  {
+    "date": "2026-02-12",
+    "title": "Biological Neurons Compete with Deep Reinforcement Learning in Sample Efficiency in a Simulated Gameworld",
+    "topic": "Bioinformatics",
+    "link": "https://arxiv.org/abs/2405.16946"
   }
 ]
