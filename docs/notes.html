@@ -64,7 +64,7 @@
 
 <script>
 async function loadPapers() {
-  const response = await fetch("papers.json");
+  const response = await fetch("papers.json", { cache: "no-store" });
   const papers = await response.json();
 
   // Sort by date (newest first)
