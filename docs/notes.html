@@ -1,94 +1,140 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Research Notes - Giacomo Maccagni</title>
 
-    <title>Giacomo Maccagni</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
 
-    <!--Favicon-->
-    <link rel="icon" type="../image/png" href="img/favicon.png">
-    <!--CSS Links-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/landing.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
-    <style>
-      .img-thumbnail {
-        margin-bottom: 15px; /* Space below images */
-      }
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/landing.css">
 
-      /* Optional: If you want to add spacing on all four sides */
-      .img-responsive {
-        margin: 7px auto; /* Center the image and add space around */
-        display: block; /* This ensures the margin auto has effect */
-      }
-    </style>
-    <!--Scripts-->
-    <script type="text/javascript" src="js/analytics.js"></script>
-    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pyscript/pyscript.js"></script>
+  <style>
+    body {
+      padding-top: 20px;
+    }
 
-  </head>
+    table {
+      margin-top: 20px;
+    }
 
-  <body>
+    th {
+      background-color: #f5f5f5;
+    }
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+    .filter-box {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
 
-          <a class="title" href="index.html">Giacomo Maccagni</a>
-          <hr>
-          <a href="#bio">About Me</a> &ensp;
-          <a href="#research">Research</a> &ensp;
-          <a href="https://github.com/marino-multipla">GitHub</a> &ensp;
-          <a href="https://scholar.google.com/citations?hl=en&user=YdS2EhMAAAAJ">Google Scholar</a> &ensp;
-          <a href="/portfolio/index.html">Projects</a> &ensp;
-          <a href="photos.html">Photography</a> &ensp;
-          <a href="notes.html">Notes</a> &ensp;
-          <br><br>
+<body>
 
-          <p>Notes</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
 
-          <div class="row">
-            <div class="col-md-4">
-              <a data-fancybox="gallery" data-src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/Area42-Robotics-VirtualTour.jpg?raw=true" data-caption="Reply Area42 Lab Virtual Tour<br>Lingotto, Turin<br>October 2023">
-                <img src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/Area42-Robotics-VirtualTour_thumbnail.jpg?raw=true" class="img-responsive img-thumbnail" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a data-fancybox="gallery" data-src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/HynesConventionCenterBoston.jpg?raw=true" data-caption="ODSC Hynes Convention Center<br>Boston, Massachusetts<br>April 2023">
-                <img src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/HynesConventionCenterBoston_thumbnail.jpg?raw=true" class="img-responsive img-thumbnail" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a data-fancybox="gallery" data-src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/KennedySpaceCenter.JPG?raw=true" data-caption="Kennedy Space Center<br>FL, United States<br>January 2023">
-                <img src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/KennedySpaceCenter_thumbnail.JPG?raw=true" class="img-responsive img-thumbnail" />
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <a data-fancybox="gallery" data-src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/KeyWest.jpg?raw=true" data-caption="617 Front St<br>Key West, FL<br>January 2023">
-                <img src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/KeyWest_thumbnail.jpg?raw=true" class="img-responsive img-thumbnail" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a data-fancybox="gallery" data-src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/Nordkap.JPG?raw=true" data-caption="North Cape<br>Nordkapp, Norway<br>August 2022">
-                <img src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/Nordkap_thumbnail.JPG?raw=true" class="img-responsive img-thumbnail" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a data-fancybox="gallery" data-src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/Ul%C3%B8ybuktNorway.jpg?raw=true" data-caption="Uløybuktveien 302<br>9197 Uløybukt, Norway<br>August 2022">
-                <img src="https://github.com/marino-multipla/marino-multipla/blob/main/photos/Ul%C3%B8ybuktNorway_thumbnail.jpg?raw=true" class="img-responsive img-thumbnail" />
-              </a>
-            </div>
-          </div>
-        <div class="col-md-1"></div>
+    <div class="col-md-10">
+
+      <!-- Header -->
+      <a class="title" href="index.html">Giacomo Maccagni</a>
+      <hr>
+
+      <!-- Navigation -->
+      <a href="#bio">About Me</a> &ensp;
+      <a href="#research">Research</a> &ensp;
+      <a href="https://github.com/marino-multipla">GitHub</a> &ensp;
+      <a href="https://scholar.google.com/">Google Scholar</a> &ensp;
+      <a href="/portfolio/index.html">Projects</a> &ensp;
+      <a href="notes.html"><strong>Notes</strong></a>
+      <br><br>
+
+      <h2>Research Reading Log</h2>
+      <p>This page tracks the research papers I read.</p>
+
+      <!-- ===== FILTER DROPDOWN ===== -->
+      <div class="filter-box">
+        <label for="topicFilter"><strong>Filter by Topic:</strong></label>
+        <select id="topicFilter" class="form-control" onchange="filterTable()">
+          <option value="all">All Topics</option>
+          <option value="Reinforcement Learning">Reinforcement Learning</option>
+          <option value="Robotics">Robotics</option>
+          <option value="Computer Vision">Computer Vision</option>
+          <option value="Optimization">Optimization</option>
+        </select>
       </div>
+
+      <!-- ===== TABLE ===== -->
+      <table class="table table-bordered table-striped" id="papersTable">
+        <thead>
+          <tr>
+            <th style="width: 15%;">Date</th>
+            <th style="width: 30%;">Paper Name</th>
+            <th style="width: 25%;">Topic</th>
+            <th style="width: 30%;">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- ===== ADD PAPERS BELOW ===== -->
+
+          <tr>
+            <td>2026-02-10</td>
+            <td>Example Paper Title</td>
+            <td>Reinforcement Learning</td>
+            <td><a href="https://arxiv.org/" target="_blank">View Paper</a></td>
+          </tr>
+
+          <tr>
+            <td>2026-02-05</td>
+            <td>Robot Manipulation Study</td>
+            <td>Robotics</td>
+            <td><a href="#" target="_blank">View Paper</a></td>
+          </tr>
+
+          <!-- Copy this block to add new entries -->
+          <!--
+          <tr>
+            <td>YYYY-MM-DD</td>
+            <td>Paper Title</td>
+            <td>Topic (must match dropdown)</td>
+            <td><a href="LINK" target="_blank">View Paper</a></td>
+          </tr>
+          -->
+
+        </tbody>
+      </table>
+
     </div>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js" integrity="sha512-j7/1CJweOskkQiS5RD9W8zhEG9D9vpgByNGxPIqkO5KrXrwyDAroM9aQ9w8J7oRqwxGyz429hPVk/zR6IOMtSA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </body>
+
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+<!-- ===== FILTER SCRIPT ===== -->
+<script>
+function filterTable() {
+  var filter = document.getElementById("topicFilter").value;
+  var table = document.getElementById("papersTable");
+  var tr = table.getElementsByTagName("tr");
+
+  for (var i = 1; i < tr.length; i++) {
+    var td = tr[i].getElementsByTagName("td")[2]; // Topic column
+    if (td) {
+      var topic = td.textContent || td.innerText;
+      if (filter === "all" || topic === filter) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+
+<script src="js/bootstrap.js"></script>
+
+</body>
 </html>
