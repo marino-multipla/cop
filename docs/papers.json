@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-02-10",
+    "title": "Example Paper Title",
+    "topic": "Reinforcement Learning",
+    "link": "https://arxiv.org/abs/xxxx.xxxxx"
+  },
+  {
+    "date": "2026-02-05",
+    "title": "Robot Manipulation Study",
+    "topic": "Robotics",
+    "link": "https://arxiv.org/abs/yyyy.yyyyy"
+  }
+]
