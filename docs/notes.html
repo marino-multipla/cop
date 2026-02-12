@@ -4,29 +4,15 @@
   <meta charset="UTF-8">
   <title>Research Notes - Giacomo Maccagni</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/favicon.png">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/landing.css">
 
   <style>
-    body {
-      padding-top: 20px;
-    }
-
-    table {
-      margin-top: 20px;
-    }
-
-    th {
-      background-color: #f5f5f5;
-    }
-
-    .filter-box {
-      margin-bottom: 15px;
-    }
+    body { padding-top: 20px; }
+    table { margin-top: 20px; }
+    th { background-color: #f5f5f5; }
+    .filter-box { margin-bottom: 15px; }
   </style>
 </head>
 
@@ -38,13 +24,11 @@
 
     <div class="col-md-10">
 
-      <!-- Header -->
       <a class="title" href="index.html">Giacomo Maccagni</a>
       <hr>
 
-      <!-- Navigation -->
-      <a href="index.html#bio">About Me</a> &ensp;
-      <a href="index.html#research">Research</a> &ensp;
+      <a href="#bio">About Me</a> &ensp;
+      <a href="#research">Research</a> &ensp;
       <a href="https://github.com/marino-multipla">GitHub</a> &ensp;
       <a href="https://scholar.google.com/">Google Scholar</a> &ensp;
       <a href="/portfolio/index.html">Projects</a> &ensp;
@@ -52,93 +36,78 @@
       <br><br>
 
       <h2>Research Reading Log</h2>
-      <p>This page tracks the research papers I read.</p>
 
-      <!-- ===== FILTER DROPDOWN ===== -->
+      <!-- Filter -->
       <div class="filter-box">
-        <label for="topicFilter"><strong>Filter by Topic:</strong></label>
-        <select id="topicFilter" class="form-control" onchange="filterTable()">
-          <option value="all">All Topics</option>
-          <option value="Reinforcement Learning">Reinforcement Learning</option>
-          <option value="Robotics">Robotics</option>
-          <option value="Computer Vision">Computer Vision</option>
-          <option value="Bioinformatics">Bioinformatics</option>
-        </select>
+        <label><strong>Filter by Topic:</strong></label>
+        <select id="topicFilter" class="form-control"></select>
       </div>
 
-      <!-- ===== TABLE ===== -->
-      <table class="table table-bordered table-striped" id="papersTable">
+      <!-- Table -->
+      <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th style="width: 15%;">Date</th>
-            <th style="width: 30%;">Paper Name</th>
-            <th style="width: 25%;">Topic</th>
-            <th style="width: 30%;">Link</th>
+            <th>Date</th>
+            <th>Paper Name</th>
+            <th>Topic</th>
+            <th>Link</th>
           </tr>
         </thead>
-        <tbody>
-
-          <!-- ===== ADD PAPERS BELOW ===== -->
-
-          <tr>
-            <td>2026-02-12</td>
-            <td>A novel protocol for the efficient generation of all three major hippocampal neuronal sub-populations from human pluripotent stem cells</td>
-            <td>Bioinformatics</td>
-            <td><a href="https://www.biorxiv.org/content/10.64898/2026.01.21.700748v1" target="_blank">View Paper</a></td>
-          </tr>
-
-          <tr>
-            <td>2026-02-12</td>
-            <td>Biological Neurons Compete with Deep Reinforcement Learning in Sample Efficiency in a Simulated Gameworld</td>
-            <td>Bioinformatics</td>
-            <td><a href="https://arxiv.org/abs/2405.16946" target="_blank">View Paper</a></td>
-          </tr>
-          
-          <tr>
-            <td>2026-02-12</td>
-            <td>Fully Spiking Variational Autoencoder</td>
-            <td>Bioinformatics</td>
-            <td><a href="https://arxiv.org/abs/2110.00375" target="_blank">View Paper</a></td>
-          </tr>
-
-          <!-- Copy this block to add new entries -->
-          <!--
-          <tr>
-            <td>YYYY-MM-DD</td>
-            <td>Paper Title</td>
-            <td>Topic (must match dropdown)</td>
-            <td><a href="LINK" target="_blank">View Paper</a></td>
-          </tr>
-          -->
-
+        <tbody id="papersBody">
         </tbody>
       </table>
 
     </div>
-
     <div class="col-md-1"></div>
   </div>
 </div>
 
-<!-- ===== FILTER SCRIPT ===== -->
 <script>
-function filterTable() {
-  var filter = document.getElementById("topicFilter").value;
-  var table = document.getElementById("papersTable");
-  var tr = table.getElementsByTagName("tr");
+async function loadPapers() {
+  const response = await fetch("papers.json");
+  const papers = await response.json();
 
-  for (var i = 1; i < tr.length; i++) {
-    var td = tr[i].getElementsByTagName("td")[2]; // Topic column
-    if (td) {
-      var topic = td.textContent || td.innerText;
-      if (filter === "all" || topic === filter) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
+  // Sort by date (newest first)
+  papers.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const tbody = document.getElementById("papersBody");
+  const topicFilter = document.getElementById("topicFilter");
+
+  const topics = new Set();
+
+  papers.forEach(paper => {
+    topics.add(paper.topic);
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${paper.date}</td>
+      <td>${paper.title}</td>
+      <td>${paper.topic}</td>
+      <td><a href="${paper.link}" target="_blank">View Paper</a></td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  // Populate filter
+  topicFilter.innerHTML = `<option value="all">All Topics</option>`;
+  topics.forEach(topic => {
+    topicFilter.innerHTML += `<option value="${topic}">${topic}</option>`;
+  });
+
+  topicFilter.addEventListener("change", function() {
+    const selected = this.value;
+    const rows = tbody.getElementsByTagName("tr");
+
+    for (let row of rows) {
+      const topicCell = row.children[2].textContent;
+      row.style.display = (selected === "all" || topicCell === selected)
+        ? ""
+        : "none";
     }
-  }
+  });
 }
+
+loadPapers();
 </script>
 
 <script src="js/bootstrap.js"></script>
