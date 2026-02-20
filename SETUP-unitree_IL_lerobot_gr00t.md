@@ -1,5 +1,11 @@
 # SETUP unitree_IL_lerobot_gr00t.md
 
+This installs: gcc,g++,make,libc, headers
+```
+sudo apt update
+sudo apt install build-essential
+```
+
 ```
 git clone --recurse-submodules https://github.com/unitreerobotics/unitree_IL_lerobot.git
 git submodule update --init --recursive
