@@ -16,5 +16,17 @@
     "title": "Biological Neurons Compete with Deep Reinforcement Learning in Sample Efficiency in a Simulated Gameworld",
     "topic": "Bioinformatics",
     "link": "https://arxiv.org/abs/2405.16946"
+  },
+  {
+    "date": "2025-05-12",
+    "title": "Experience-Learning Inspired Two-Step Reward Method for Efficient Legged Locomotion Learning Towards Natural and Robust Gaits",
+    "topic": "Robotics - Quadruped",
+    "link": "https://arxiv.org/pdf/2401.12389v1"
+  },
+  {
+    "date": "2025-05-12",
+    "title": "Robot Parkour Learning",
+    "topic": "Robotics - Quadruped",
+    "link": "https://arxiv.org/abs/2309.05665"
   }
 ]
