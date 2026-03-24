@@ -54,6 +54,7 @@ cat ~/.ssh/id_ed25519.pub
 Go to:
 GitHub → Settings → SSH and GPG keys → New SSH Key → Paste it.
 
+cd path_local_repo
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 
 git init
