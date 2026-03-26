@@ -2,6 +2,7 @@
 ## ✅ 1. Clone the repository
 ```
 git clone https://github.com/username/repo.git
+git clone git@github.com:username/repo.git
 ```
 ## (Optional: clone and immediately switch to a branch)
 ```
