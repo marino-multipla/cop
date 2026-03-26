@@ -60,6 +60,7 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 
 git init
 git add .
+git status
 git commit -m "Initial commit"
 git branch -M main
 git remote add origin https://github.com/USERNAME/REPOSITORY.git
