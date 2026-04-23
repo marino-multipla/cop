@@ -72,4 +72,7 @@ git commit -m "Initial commit"
 git branch -M main
 git remote add origin https://github.com/USERNAME/REPOSITORY.git
 git push -f origin main
+
+# Unstage everything
+git rm --cached -r .
 ```
