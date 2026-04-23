@@ -47,10 +47,17 @@ git config --global user.name "XXX"
 git config --global user.email "XXX"
 git config --global --list
 
+# UBUNTU
 ls ~/.ssh
 cd ~/.ssh
 ssh-keygen -t ed25519 -C "EMAIL"
 cat ~/.ssh/id_ed25519.pub
+
+# WINDOWS
+dir %USERPROFILE%\.ssh
+cd %USERPROFILE%\.ssh
+ssh-keygen -t ed25519 -C "EMAIL"
+type %USERPROFILE%\.ssh\id_ed25519.pub
 
 Go to:
 GitHub → Settings → SSH and GPG keys → New SSH Key → Paste it.
