@@ -17,3 +17,6 @@ conda create --name new_env_name --file spec.txt
 Same machine	--clone
 Different machine	env export
 Need exact binary builds	--explicit
+
+## Conda environment full path
+conda info --envs
