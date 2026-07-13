@@ -20,3 +20,9 @@ Need exact binary builds	--explicit
 
 ## Conda environment full path
 conda info --envs
+
+## Others
+conda remove --name ENV_NAME --all
+conda env config vars set my_var=value
+conda env config vars list
+conda create --name=eri-xchange-2023 python=3.7.9
