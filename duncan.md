@@ -8,6 +8,7 @@
 ## 27/07/2026
 - Next pong: use unique and disjoint feedback electrodes set wrt sensory electrode set;
 - Next pong: No need to send ball input as stims between the paddle and opposite wall scene time;
+- Next pong: remove pong hysteresis that causes wrong metrics;
 - Next pong: leverage overnight sessions to maximise the recording time and swap time between MEAs;
 - Next pong: implement reply pong v1 with new spawn at each rally;
 - Next pong: implement reply pong v2 with new spawn at each rally away from the ball line of sight;
