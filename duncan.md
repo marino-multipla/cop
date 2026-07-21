@@ -7,6 +7,7 @@
 - 0.6 BAR
 ## 27/07/2026
 - Next pong: use unique and disjoint feedback electrodes set wrt sensory electrode set;
+- Next pong: No need to send ball input as stims between the paddle and opposite wall scene time;
 - Next pong: implement reply pong v1 with new spawn at each rally;
 - Next pong: implement reply pong v2 with new spawn at each rally away from the ball line of sight;
 - Next pong: Save H/M metrics in clear;
