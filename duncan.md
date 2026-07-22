@@ -17,3 +17,4 @@
 - Next pong: Not need to compare with MEATest with reply pong v2;
 - Next app: robotic arm with websocket;
 - Add application name and version inside each h5;
+- add gas pump speed and co2 level into h5  for each experiment;
