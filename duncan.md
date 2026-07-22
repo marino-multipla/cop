@@ -16,3 +16,4 @@
 - Next pong: Fixed duration for each session with strict timeout;
 - Next pong: Not need to compare with MEATest with reply pong v2;
 - Next app: robotic arm with websocket;
+- Add application name and version inside each h5;
