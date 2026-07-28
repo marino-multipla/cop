@@ -18,3 +18,9 @@
 - Next app: robotic arm with websocket;
 - Add application name and version inside each h5;
 - add gas pump speed and co2 level into h5  for each experiment;
+- Verify those constraints for Stim Design:
+```
+    duration_us must be positive and evenly divisible by 20 us.
+    current_uA must be less than or equal to 3.0 uA in absolute terms (i.e. range -3.0 to 3.0).
+    Total charge must not exceed 3.0 nanocoulombs (nC).
+```
