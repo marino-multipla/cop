@@ -76,3 +76,11 @@ git push -f origin main
 # Unstage everything
 git rm --cached -r .
 ```
+# Check Repo Disk Usage in KB
+```
+Install gh using Windows cmd
+winget install --id GitHub.cli
+gh --version
+gh auth login
+gh repo view OWNER/REPO --json diskUsage
+```
