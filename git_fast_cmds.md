@@ -84,3 +84,6 @@ gh --version
 gh auth login
 gh repo view OWNER/REPO --json diskUsage
 ```
+
+# Windows Installer
+https://git-scm.com/install/windows
